@@ -2,7 +2,9 @@ package TestExample;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -30,15 +32,15 @@ public class OmegaFi {
 
         Thread.sleep(10000);
 
-        driver.findElement(By.className("slides-icon-waffle")).click();
+        //driver.findElement(By.xpath("//button[@id='474:82;a']")).click();
+        driver.findElement(By.className("slds-icon-waffle")).click();
+        Thread.sleep(2000);
 
-        Thread.sleep(20000);
-
-
-        driver.quit();
-
-
-
+        driver.findElement(By.xpath("//input[@id='input-72']")).sendKeys("Contacts", Keys.ENTER);
+        //Thread.sleep(2000);
+        //driver.findElement(By.xpath("//*[@id='Contact']")).click();
+        //driver.findElement(By.id("//*[@id='Contact']")).click();
+        //driver.findElement(By.xpath("//input[@id='input-72']")).click();
 
     }
 
